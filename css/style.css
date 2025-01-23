@@ -46,6 +46,13 @@ body {
   font-weight: bold;
 }
 
+.salin-btn {
+  position: absolute; /* Membuat tombol menjadi relatif terhadap card */
+  top: 10px;         /* Jarak dari atas */
+  right: 10px;       /* Jarak dari kanan */
+  z-index: 10;       /* Agar berada di atas elemen lainnya */
+}
+
 .heading_container h2::before {
   content: "";
   position: absolute;

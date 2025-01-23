@@ -4437,3 +4437,12 @@
 
 }));
 //# sourceMappingURL=bootstrap.js.map
+
+// untuk code
+  function copyCode() {
+    // Salin teks kode
+    const code = document.getElementById("code-block").innerText;
+    navigator.clipboard.writeText(code).then(() => {
+      alert("Kode berhasil disalin!");
+    });
+  }
