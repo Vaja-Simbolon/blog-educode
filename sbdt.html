@@ -59,10 +59,10 @@
                   <a class="nav-link" href="index.html"> Beranda</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#aboutLink"> Tentang</a>
+                  <a class="nav-link" href="about.html"> Tentang</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#serviceLink"> Layanan </a>
+                  <a class="nav-link" href="service.html"> Layanan </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#contactLink">Kontak Kami</a>
@@ -73,7 +73,7 @@
               <a href="">
                 <img src="images/call.png" alt="">
                 <span>
-                  Call : + 62 81275232909
+                  Hubungi : + 62 81275232909
                 </span>
               </a>
               <form class="form-inline">
@@ -98,9 +98,9 @@
                     <h1>
                       Materi Sistem Basis Data - Terdistribusi 
                     </h1>
-                    <p>
+                    <!-- <p>
                       Ingin belajar mengenai database ?  ini solusinyaa!! 
-                    </p>
+                    </p> -->
                   </div>
                 </div>
                 <div class="col-md-5">
@@ -130,31 +130,135 @@
                   <img src="images/database.png" alt="">
                 </div>
                 <h5>
-                  Apa itu Sistem Basis Data
+                  Apa itu Sistem Basis Data - Terdistribusi
                 </h5>
               </div>
-              <div class="bottom-box">
+              <div class="bottom-box" style="text-align: justify;">
                 <p>
-                  Sistem Basis Data adalah kumpulan data yang terorganisir serta perangkat lunak (software) yang dirancang untuk mengelola  data tersebut. Sistem ini memungkinkan pengguna untuk menyimpan, mengelola, mengambil, dan memanipulasi data secara efisien. Sistem basis data digunakan untuk mendukung berbagai kebutuhan aplikasi, baik skala kecil hingga besar.
+                  Sistem Basis Data adalah kumpulan data yang terorganisir serta perangkat lunak (software) yang dirancang untuk mengelola  data tersebut. Sistem ini memungkinkan pengguna untuk menyimpan, mengelola, mengambil, dan memanipulasi data secara efisien. Sistem basis data digunakan untuk mendukung berbagai kebutuhan aplikasi, baik skala kecil hingga besar. Sedangkan Sistem Basis Data Terdistribusi (Distributed Database System) adalah sistem basis data di mana data disimpan di beberapa lokasi yang berbeda, namun dikelola sedemikian rupa sehingga terlihat seperti satu kesatuan. Data di setiap lokasi dapat diakses melalui jaringan, dan sistem ini dirancang untuk memastikan ketersediaan, keandalan, dan konsistensi data di seluruh lokasi.
                 </p>
+                <h6><b>Ciri-ciri Sistem Basis Data Terdistribusi</b></h6>
+                  <ul>
+                    <li>Distribusi Data: Data disimpan di lebih dari satu lokasi fisik.</li>
+                    <li>Transparansi: Pengguna tidak perlu mengetahui di mana data sebenarnya disimpan.</li>
+                    <li>Replikasi: Data dapat digandakan (di-replikasi) untuk meningkatkan ketersediaan dan kinerja.</li>
+                    <li>Konektivitas Jaringan: Sistem membutuhkan jaringan untuk menghubungkan lokasi-lokasi penyimpanan data.</li>
+                    <li>Independensi Lokasi: Pengguna dapat mengakses data tanpa memikirkan lokasi fisiknya.</li>
+                  </ul>
+                  <p>Sistem ini sangat berguna untuk aplikasi berskala besar, seperti e-commerce, sistem perbankan, atau aplikasi yang melayani pengguna dari berbagai wilayah. xReplikasi dalam sistem basis data adalah proses membuat salinan data dari satu database ke database lain, biasanya untuk meningkatkan ketersediaan, keandalan, dan kinerja sistem. Dalam konteks Sistem Basis Data Terdistribusi (Distributed Database System), replikasi memainkan peran penting. Berikut penjelasan detailnya:
+                  </p>
+                  <h6 style="display: flex; align-items: center; gap: 1rem;">
+                    <div>
+                      <h6><b>Apa itu Replikasi?</b></h6>
+                      <p>Replikasi adalah mekanisme di mana data dari satu server (master) disalin atau didistribusikan ke server lain (replica/slave). Proses ini bisa dilakukan secara otomatis berdasarkan konfigurasi tertentu, sehingga perubahan data pada server utama dapat direfleksikan pada salinan di server lain.</p>
+                    </div>
+                    <img src="images/replikasi.png" alt="sketsa-replikasi" style="max-width: 40%; height: auto; border-radius: 8px;">
+                  </h6>
+                  <h6><b>Tujuan Replikasi</b></h6>
+                  <ul>
+                    <li><i>Ketersediaan Data (Availability)</i> <br>
+                      Dengan replikasi, jika salah satu server gagal (down), data tetap bisa diakses dari salinan di server lain.</li>
+                    <li><i>Kinerja yang Lebih Baik (Performance)</i> <br>
+                      Salinan data memungkinkan pembagian beban kerja (load balancing), sehingga banyak pengguna dapat mengakses data tanpa memengaruhi kinerja server utama.</li>
+                    <li><i>Keamanan Data (Data Safety)</i> <br>
+                      Replikasi juga bisa digunakan sebagai mekanisme cadangan (backup) untuk melindungi data dari kerusakan atau kehilangan.</li>
+                    <li><i>Distribusi Data</i> <br>
+                      Memungkinkan data tersedia lebih dekat dengan lokasi pengguna, mengurangi latensi jaringan.</li>
+                  </ul>
+                  <p>Replikasi ada dua arah yaitu <b>Master to Master</b> dan <b>Master to Slave</b></p>
+                  <ul>
+                    <li style="list-style-type: decimal;"><b>Replikasi Master to Master</b></li>
+                    <p>Replikasi master-to-master adalah metode di mana dua atau lebih server database bertindak sebagai master, dan masing-masing dapat menerima pembaruan data. Setiap perubahan yang terjadi pada satu master akan direplikasi ke master lainnya.</p>
+                    <h6>Karakteristik</h6>
+                    <ul>
+                      <li style="list-style-type: disc;">Dua arah: Data dapat diubah di kedua server, dan perubahan akan disinkronkan di antara keduanya.</li>
+                      <li style="list-style-type: disc;">Konsistensi: Sangat cocok untuk sistem yang membutuhkan ketersediaan tinggi dan toleransi kegagalan.</li>
+                      <li style="list-style-type: disc;">Penggunaan: Biasanya digunakan untuk aplikasi yang membutuhkan kemampuan penulisan/pembacaan dari beberapa lokasi, seperti e-commerce atau aplikasi multi-lokasi.</li>
+                    </ul>
+                    <h6>Kelebihan</h6>
+                    <ul>
+                      <li style="list-style-type: disc;">Tidak ada single point of failure karena jika salah satu server gagal, server lainnya tetap bisa melayani.</li>
+                      <li style="list-style-type: disc;">Konsistensi: Sangat cocok untuk sistem yang membutuhkan ketersediaan tinggi dan toleransi kegagalan.</li>
+                    </ul>
+                    <h6>Kekurangan</h6>
+                    <ul>
+                      <li style="list-style-type: disc;">Konflik data dapat terjadi jika dua master melakukan perubahan pada data yang sama secara bersamaan. Biasanya diperlukan mekanisme untuk menyelesaikan konflik ini.</li>
+                      <li style="list-style-type: disc;">Konfigurasi dan pengelolaan lebih kompleks dibandingkan replikasi satu arah.</li>
+                    </ul>
+                    <p></p>
+                    <li style="list-style-type: decimal;"><b>Replikasi Master to Slave</b></li>
+                    <p>Replikasi master-to-slave adalah metode di mana hanya satu server yang bertindak sebagai master, sementara server lainnya bertindak sebagai slave. Master adalah satu-satunya sumber perubahan data, dan semua slave hanya menerima salinan (read-only) dari master.</p>
+                    <h6>Karakteristik</h6>
+                    <ul>
+                      <li style="list-style-type: disc;">Satu arah: Data hanya mengalir dari master ke slave.</li>
+                      <li style="list-style-type: disc;">Konsistensi baca: Slave digunakan untuk operasi pembacaan, sementara master menangani pembaruan data.</li>
+                      <li style="list-style-type: disc;">Penggunaan: Cocok untuk aplikasi yang membutuhkan banyak pembacaan data, seperti analitik atau cache data.</li>
+                    </ul>
+                    <h6>Kelebihan</h6>
+                    <ul>
+                      <li style="list-style-type: disc;">Beban kerja pembacaan dapat didistribusikan ke slave, sehingga master dapat lebih fokus pada operasi penulisan.</li>
+                      <li style="list-style-type: disc;">Relatif lebih sederhana untuk diatur dibandingkan master-to-master.</li>
+                    </ul>
+                    <h6>Kekurangan</h6>
+                    <ul>
+                      <li style="list-style-type: disc;">Tidak mendukung pembaruan data pada slave. Jika ada kebutuhan untuk pembaruan, perubahan harus dikirim kembali ke master.</li>
+                      <li style="list-style-type: disc;">Jika master gagal, sistem memerlukan konfigurasi ulang untuk menjadikan salah satu slave sebagai master (failover).</li>
+                    </ul>
+                  </ul>
+                  <p></p>
+                  <h6><b>Perbedaan Utama</b></h6>
+                  <div
+                  class="table-responsive"
+                >
+                  <table
+                    class="table table-striped table-hover table-borderless table-bordered align-middle"
+                  >
+                    <thead class="table-light">
+                      <tr>
+                        <th>Fitur</th>
+                        <th>Master-to-Master</th>
+                        <th>Master-to-Slave</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                      <tr
+                        class="table-primary"
+                      >
+                        <td scope="row"><b>Arah Replikasi</b></td>
+                        <td>Dua arah</td>
+                        <td>Satu arah (Master ke Slave)</td>
+                      </tr>
+                      <tr
+                        class="table-primary"
+                      >
+                        <td scope="row"><b>Operasi Tulis</b></td>
+                        <td>Semua server dapat menulis</td>
+                        <td>Hanya master yang dapat menulis</td>
+                      </tr>
+                      <tr
+                        class="table-primary"
+                      >
+                        <td scope="row"><b>Kompleksitas</b></td>
+                        <td>Lebih kompleks (butuh manajemen konflik)</td>
+                        <td>Relatif lebih sederhana</td>
+                      </tr>
+                      <tr
+                        class="table-primary"
+                      >
+                        <td scope="row"><b>Kegunaan Utama</b></td>
+                        <td>High Availability (multi-location writes)</td>
+                        <td>Load balancing untuk pembacaan data</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      
+                    </tfoot>
+                  </table>
+                </div>
+                                    
+                  
               </div>
             </div>
-            <!-- <div class="box b-1">
-              <div class="top-box">
-                <div class="icon-box">
-                  <img src="images/work-i2.png" alt="">
-                </div>
-                <h5>
-                  Then We Start Applying Ideas
-                </h5>
-              </div>
-              <div class="bottom-box">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim veniam
-                </p>
-              </div>
-            </div> -->
           </div>
         </div>        
       </div>
@@ -162,7 +266,8 @@
   </section>
   <!-- end work section -->
 
-  <div class="container my-5">
+  <div class="container mt-10">
+    <p>Code</p>
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Membuat User Replikasi - Master</h5>
@@ -173,7 +278,7 @@
                   console.log("Hello, World!");
               }
               helloWorld();
-          </code>
+          </code>1
               </pre>
         <button class="btn btn-primary mt-3" onclick="copyCode()">
           Salin Kode
@@ -188,7 +293,7 @@
       <div class="container">
         <div class="heading_container">
           <h2>
-            Get In touch
+            Hubungi Kami
           </h2>
         </div>
       </div>
@@ -198,23 +303,23 @@
             <form>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="inputName4" placeholder="Name ">
+                  <input type="text" class="form-control" id="inputName4" placeholder="Nama ">
                 </div>
                 <div class="form-group col-md-6">
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email id">
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
                 </div>
 
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <input type="text" class="form-control" id="inputSubject4" placeholder="Subject">
+                  <input type="text" class="form-control" id="inputSubject4" placeholder="Subjek">
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" id="inputMessage" placeholder="Message">
+                <input type="text" class="form-control" id="inputMessage" placeholder="Pesan">
               </div>
               <div class="d-flex justify-content-center">
-                <button type="submit" class="">Send</button>
+                <button type="submit" class="">Kirim</button>
               </div>
             </form>
           </div>
@@ -242,20 +347,20 @@
           <div class="col-md-3">
             <div class="info_links">
               <h4>
-                BASIC LINKS
+                Tautan Dasar
               </h4>
               <ul class="  ">
                 <li class=" active">
-                  <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="" href="index.html">Beranda <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="">
-                  <a class="" href="about.html"> About</a>
+                  <a class="" href="about.html"> Tentang</a>
                 </li>
                 <li class="">
-                  <a class="" href="service.html"> Services </a>
+                  <a class="" href="service.html"> Layanan</a>
                 </li>
                 <li class="">
-                  <a class="" href="#contactLink">Contact Us</a>
+                  <a class="" href="#contactLink">Kontak</a>
                 </li>
               </ul>
             </div>
@@ -263,7 +368,7 @@
           <div class="col-md-3">
             <div class="info_contact">
               <h4>
-                CONTACT DETAILS
+                Rincian Kontak
               </h4>
               <a href="">
                 <div class="img-box">
@@ -286,12 +391,12 @@
           <div class="col-md-3">
             <div class="info_form ">
               <h4>
-                NEWSLETTER
+                Buletin
               </h4>
               <form action="">
-                <input type="email" placeholder="Enter your email">
+                <input type="email" placeholder="Masukkan email kamu!">
                 <button>
-                  Subscribe
+                  Berlangganan
                 </button>
               </form>
               <div class="social_box">
