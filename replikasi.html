@@ -30,7 +30,9 @@
   <link href="css/responsive.css" rel="stylesheet" />
   <!-- prism -->
   <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
-  
+  <!-- bootstrap icon -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 
 <body class="sub_page">
@@ -93,7 +95,7 @@
     <div class="container-fluid">
       <div class="heading_container">
         <h2>
-          Tutorial Melakukan Replikasi Menggunakan MySql
+          Tutorial Melakukan Replikasi Menggunakan Database MySql
         </h2>
       </div>
 
@@ -211,27 +213,54 @@
                 <div class="card">
                   <div class="card-body" style="background-color: bisque;">
                     <h6 class="card-title">Membuat User Replikasi</h6>
-                    <!-- Prism.js Syntax Highlight -->
                     <div class="code-container">
                       <pre class="language-javascript">
-          <code id="code-block">
-    GRANT REPLICATION SLAVE ON *.* TO 'slave'@'192.168.1.2' IDENTIFIED BY 'slave';
-          </code>
+                        <code id="code-block1">
+  GRANT REPLICATION SLAVE ON *.* TO 'slave'@'192.168.1.2' IDENTIFIED BY 'slave'; 
+</code>
                       </pre>
                     </div>
+                    <div class="salin-btn">
+                      <button class="btn btn-light mt-3" onclick="copyCode1()">
+                        <i class="bi bi-copy"></i>
+                        <span class="tooltip-text">Copy Code</span>
+                      </button>
+                    </div>
+
                     <p>Keterangan: <br>
                       <b>*</b> = simbol ini diartikan semua, jadi <br>
-                      <b>*.*</b> = ini diartikan semua database dan semua tabel dapat diakses oleh si user yang bernama 'slave'
+                      <b>*.*</b> = ini diartikan semua database dan semua tabel dapat diakses oleh si user yang bernama
+                      'slave' <br>
+                      <b>IDENTIFIED BY</b> = berfungsi untuk membuat password untuk user yang tekah di buat.
                     </p>
-                    <button class="btn btn-primary mt-3" onclick="copyCode()">
-                      Salin Kode
-                    </button>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body" style="background-color: bisque;">
+                    <h6 class="card-title">Refresh Ulang Server MySql</h6>
+                    <div class="code-container">
+                      <pre class="language-javascript">
+                        <code id="code-block2">
+  FLUSH PRIVILEGES
+</code> 
+                      </pre>
+                    </div>
+                    <div class="salin-btn">
+                      <button class="btn btn-light mt-3" onclick="copyCode2()">
+                        <i class="bi bi-copy"></i>
+                        <span class="tooltip-text">Copy Code</span>
+                      </button>
+                    </div>
+                    <p>Perintah FLUSH PRIVILEGES pada MySQL digunakan untuk memuat ulang tabel hak akses (privilege
+                      tables) di dalam memori, yang memungkinkan perubahan hak akses (privileges) segera diterapkan
+                      tanpa harus me-restart server MySQL.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          
+
 
         </div>
       </section>

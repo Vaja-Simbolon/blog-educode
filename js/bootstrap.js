@@ -4439,12 +4439,18 @@
 //# sourceMappingURL=bootstrap.js.map
 
 // untuk code
-  function copyCode() {
+  function copyCode1() {
     // Salin teks kode
-    const code = document.getElementById("code-block").innerText;
+    const code = document.getElementById("code-block1").innerText;
     navigator.clipboard.writeText(code).then(() => {
       alert("Kode berhasil disalin!");
     });
   }
-
-
+// untuk code
+  function copyCode2() {
+    // Salin teks kode
+    const code = document.getElementById("code-block2").innerText;
+    navigator.clipboard.writeText(code).then(() => {
+      alert("Kode berhasil disalin!");
+    });
+  }

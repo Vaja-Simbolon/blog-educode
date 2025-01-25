@@ -48,10 +48,47 @@ body {
 
 .salin-btn {
   position: absolute; /* Membuat tombol menjadi relatif terhadap card */
-  top: 10px;         /* Jarak dari atas */
-  right: 10px;       /* Jarak dari kanan */
-  z-index: 10;       /* Agar berada di atas elemen lainnya */
+  top: 30pt;         /* Jarak dari atas */
+  right: 25px;       /* Jarak dari kanan */
+  z-index: 10;   
 }
+
+.salin-btn .tooltip-text {
+  visibility: hidden;
+  background-color: #0b1f81; /* Warna latar tooltip */
+  color: #fff; /* Warna teks */
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 115%; /* Tooltip muncul di atas tombol */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Panah tooltip */
+.salin-btn .tooltip-text::after {
+  content: '';
+  position: absolute;
+  top: 100%; /* Letakkan panah di bawah tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #343a40 transparent transparent transparent; /* Warna panah */
+}
+
+/* Tampilkan tooltip saat hover */
+.salin-btn:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 .heading_container h2::before {
   content: "";
@@ -482,16 +519,10 @@ a:focus {
 }
 
 
-/* .about_section .detail-box1 {
-  margin-bottom: 10px;
-  padding: 10px;
-  color: #000000;
-  background-color: #b6b6b6;
-  border-radius: 1ch;
-  -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.15);
-  
-} */
+.about_section .detail-box1 .card .btn{
+  display: flex;
+  justify-content: flex-end;
+}
 
 
 
