@@ -93,7 +93,7 @@
     <div class="container-fluid">
       <div class="heading_container">
         <h2>
-          Tutorial Melakukan Replikasi Menggunakan Database MySql
+          Tutorial Melakukan Replikasi Menggunakan MySql
         </h2>
       </div>
 
@@ -202,34 +202,36 @@
                 <h6><b>Replikasi Master To Slave</b></h6>
                 <p>
                   Untuk sebagai contoh kita inisiasi IP untuk PC master dan Slave!
+                </p>
                 <ul>
                   <li><b>IP PC Master:</b> 192.168.10.1</li>
                   <li><b>IP PC Slave:</b> 192.168.10.2</li>
                 </ul>
-                </p>
-                
-                <div class="container mt-10">
-                  <p>Konfigurasi pada PC yang berperan sebagai MASTER</p>
-                  <div class="card">
-                    <div class="card-body" style="background-color: bisque;">
-                      <h6 class="card-title">Membuat User Replikasi</h6>
+                <p>Konfigurasi pada PC yang berperan sebagai MASTER</p>
+                <div class="card">
+                  <div class="card-body" style="background-color: bisque;">
+                    <h6 class="card-title">Membuat User Replikasi</h6>
+                    <!-- Prism.js Syntax Highlight -->
+                    <div class="code-container">
                       <pre class="language-javascript">
-                        <code id="code-block">
+          <code id="code-block">
     GRANT REPLICATION SLAVE ON *.* TO 'slave'@'192.168.1.2' IDENTIFIED BY 'slave';
-                        </code>
+          </code>
                       </pre>
-                      <p>Keterangan : <br>
-                        * = simbol ini diartikan semua, jadi <br>
-                        *.* = ini diartikan semua database dan semua tabel dapat di akses oleh si user yang bernama 'slave' </p>
-                      <button class="btn btn-primary mt-3" onclick="copyCode()">
-                        Salin Kode
-                      </button>
                     </div>
+                    <p>Keterangan: <br>
+                      <b>*</b> = simbol ini diartikan semua, jadi <br>
+                      <b>*.*</b> = ini diartikan semua database dan semua tabel dapat diakses oleh si user yang bernama 'slave'
+                    </p>
+                    <button class="btn btn-primary mt-3" onclick="copyCode()">
+                      Salin Kode
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          
 
         </div>
       </section>
