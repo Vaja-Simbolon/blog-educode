@@ -372,10 +372,23 @@ a:focus {
   border-radius: 30px;
   margin: 25px 0 45px 0;
 }
-
 .about_section .detail-box a:hover {
   background-color: #e0cd61;
 }
+
+.dokumentasi-belajar a {
+  display: inline-block;
+  padding: 10px 35px;
+  background-color: #d8bf36;
+  color: #ffffff;
+  border-radius: 30px;
+  margin: 25px 0 45px 0;
+}
+.dokumentasi-belajar a:hover {
+  background-color: #e0cd61;
+}
+
+
 
 .service_section {
   background-color: #041858;
