@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 
 <head>
   <!-- Basic -->
@@ -15,8 +15,10 @@
   <title>EduCode - Company</title>
 
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
@@ -26,6 +28,9 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <!-- prism -->
+  <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+  
 </head>
 
 <body class="sub_page">
@@ -41,7 +46,8 @@
             </span>
           </a>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="s-1"> </span>
             <span class="s-2"> </span>
             <span class="s-3"> </span>
@@ -90,71 +96,143 @@
           Tutorial Melakukan Replikasi Menggunakan Database MySql
         </h2>
       </div>
-      
-         <!-- about section -->
 
-   <section class="about_section" id="aboutLink">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <div class="detail-box" style="text-align: justify;">
-            <p>
-              Untuk melakukan replikasi ada dua arah yaitu master-to-master dan master-to-slave. Kemudian untuk koneksi antara device dengan device lainnya ada dua yaitu bisa menggunakan kabel LAN 
-              <i>(Local Area Network)</i> dan bisa juga menggunakan Jaringan Wi-fi atau Hostpot. Akan tetapi pada tutorial ini kita akan diarahkan menggunakan jaringan Hostpot. 
-              Sebelum masuk ketahap praktek nya, ada beberapa yang harus diperhatikan dan harus di set-up agar tidak terjadi konflik pada saat melakukan replikasi.
-              Syarat-syarat sebelum melakukan replikasi :
-                <li>Gunakan 2 PC/Laptop atau lebih <i>(1 sebagai master dan 1 sebagai slave)</i>.</li>
-                <li>Ke 2 device harus terhubung ke koneksi yang sama  <i>(Contohnya : Hostpot)</i>.</li>
-                <li>Matikan semua Anti Virus yang sedang berjalan di setiap PC/Laptop anda!</li>
-                <li>Matikan Windows Defender yang sedang ON di setiap PC/Laptop anda!</li>
+      <!-- about section -->
 
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">ini caranya</button>
+      <section class="about_section" id="aboutLink">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="detail-box" style="text-align: justify; hyphens: auto; word-wrap: break-word; ">
+                <p>
+                  Untuk melakukan replikasi ada dua arah yaitu master-to-master dan master-to-slave. Kemudian untuk
+                  koneksi antara device dengan device lainnya ada dua yaitu bisa menggunakan kabel LAN
+                  <i>(Local Area Network)</i> dan bisa juga menggunakan Jaringan Wi-fi atau Hostpot. Akan tetapi pada
+                  tutorial ini kita akan diarahkan menggunakan jaringan Hostpot.
+                  Sebelum masuk ketahap praktek nya, ada beberapa yang harus diperhatikan dan harus di set-up agar tidak
+                  terjadi konflik pada saat melakukan replikasi.
+                  Syarat-syarat sebelum melakukan replikasi :
+                <ul>
+                  <li>Gunakan 2 PC/Laptop atau lebih <i>(1 sebagai master dan 1 sebagai slave)</i>.</li>
+                  <li>Semua device harus terhubung ke koneksi yang sama <i>(Contohnya : Hostpot)</i>.</li>
+                  <li>Matikan semua Anti Virus yang sedang berjalan di setiap PC/Laptop anda!</li>
+                  <li>Matikan Windows Defender yang sedang ON di setiap PC/Laptop anda!</li>
 
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasRightLabel">Cara Mematikan Windows Defender</h5>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ini Caranya</button>
+
+                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel" style="text-align: left;">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasRightLabel">Cara Mematikan Windows Defender</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                  <div class="offcanvas-body">
-                    <ul>
-                      <li style="list-style: decimal;">Pertama buka pencarian di PC/Laptop anda!</li>
-                      <li style="list-style: decimal;">Cari "Windows Defender Firewall" dan buka!
-                        <img src="images/defender.png" alt="windows-defender-firewall">
-                      </li>
-                      <li style="list-style: decimal;">Di bagian sidebar klik "Turn Windows Defender Firewall on or off"!
-                        <img src="images/2.png" alt="windows-defender-firewall">
-                      </li>
-                      <li style="list-style: decimal;">Kemudian ganti menjadi turn off! lalu save!
-                        <img src="images/3.png" alt="windows-defender-firewall">
-                      </li>
-                      <li style="list-style: decimal;">Pastikan Windows Defender Firewall nya sudah off / berwarna merah !
-                        <img src="images/1.png" alt="windows-defender-firewall">
-                      </li>
-                    </ul>
-                    <p>Alasannya ini dilakukan supaya tidak ada penghambat komunikasi dengan device lain!</p>
+                    <div class="offcanvas-body">
+                      <ul>
+                        <li style="list-style: decimal;">Pertama buka pencarian di PC/Laptop anda!</li>
+                        <li style="list-style: decimal;">Cari "Windows Defender Firewall" dan buka!
+                          <img src="images/defender.png" alt="windows-defender-firewall">
+                        </li>
+                        <li style="list-style: decimal;">Di bagian sidebar klik "Turn Windows Defender Firewall on or
+                          off"!
+                          <img src="images/2.png" alt="windows-defender-firewall">
+                        </li>
+                        <li style="list-style: decimal;">Kemudian ganti menjadi turn off! lalu save!
+                          <img src="images/3.png" alt="windows-defender-firewall">
+                        </li>
+                        <li style="list-style: decimal;">Pastikan Windows Defender Firewall nya sudah off / berwarna
+                          merah !
+                          <img src="images/1.png" alt="windows-defender-firewall">
+                        </li>
+                      </ul>
+                      <p>Alasannya ini dilakukan supaya tidak ada penghambat komunikasi dengan device lain!</p>
+                    </div>
+                  </div>
+
+                  <li>Setelah semua PC/Laptop melakukan syarat diatas, kemudian hubungkan dengan koneksi yang sama, lalu
+                    cek IP dari masing-masing PC/Laptop</li>
+
+                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight1" aria-controls="offcanvasRight">Ini Caranya</button>
+
+                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight1"
+                    aria-labelledby="offcanvasRightLabel" style="text-align: left;">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasRightLabel">Cara Cek IP pada setiap PC dan melakukan tes
+                        ping </h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul>
+                        <li style="list-style: decimal;">Pertama buka CMD di masing-masing PC/Laptop (Win+R) ketik CMD
+                          lalu enter</li>
+                        <li style="list-style: decimal;">Kemudian ketik "ipconfig"
+                          <img src="images/ip1.png" alt="windows-defender-firewall">
+                        </li>
+                        <li style="list-style: decimal;">Scroll paling bawah dengan tulisan "Wireless LAN adapter
+                          Wi-Fi:" ini adalah IP atau alamat dari PC anda <b>"IPv4 Address. . . . . . . . . . . :
+                            192.168.220.206"</b>
+                          <img src="images/ip.png" alt="windows-defender-firewall">
+                          <p>lakukan pada setiap PC/Laptop</p>
+                        </li>
+                        <li style="list-style: decimal;">Kemudian jika pada setiap PC/Laptop sudah diketahui IP nya
+                          masing-masing coba lakukan tes ping!, contohnya IP dari PC ke 2 <b>"192.168.1.1"</b>
+                          <img src="images/ip2.png" alt="windows-defender-firewall">
+                          <p>Pastikan pesan yang muncul harus <b>"Reply From .... TTL..."</b> jika sudah seperti itu
+                            berarti test ping nya gagal dan sudah bisa saling berkomunikasi lewat jaringan, akan tetapi
+                            jika pesan yang muncul <b>"Request Time Out"</b> artinya test ping gagal coba balik ke
+                            syarat pertama di atas! </p>
+                        </li>
+                    </div>
+                  </div>
+                </ul>
+                </p>
+                <p>Setelah konfigurasi di atas sudah berhasil semua maka kita lanjut ke tahap pengujian Replikasi.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="img-box">
+                <img src="images/about-img2.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="detail-box1" style="text-align: justify;">
+                <h6><b>Replikasi Master To Slave</b></h6>
+                <p>
+                  Untuk sebagai contoh kita inisiasi IP untuk PC master dan Slave!
+                <ul>
+                  <li><b>IP PC Master:</b> 192.168.10.1</li>
+                  <li><b>IP PC Slave:</b> 192.168.10.2</li>
+                </ul>
+                </p>
+                
+                <div class="container mt-10">
+                  <p>Konfigurasi pada PC yang berperan sebagai MASTER</p>
+                  <div class="card">
+                    <div class="card-body" style="background-color: bisque;">
+                      <h6 class="card-title">Membuat User Replikasi</h6>
+                      <pre class="language-javascript">
+                        <code id="code-block">
+    GRANT REPLICATION SLAVE ON *.* TO 'slave'@'192.168.1.2' IDENTIFIED BY 'slave';
+                        </code>
+                      </pre>
+                      <p>Keterangan : <br>
+                        * = simbol ini diartikan semua, jadi <br>
+                        *.* = ini diartikan semua database dan semua tabel dapat di akses oleh si user yang bernama 'slave' </p>
+                      <button class="btn btn-primary mt-3" onclick="copyCode()">
+                        Salin Kode
+                      </button>
+                    </div>
                   </div>
                 </div>
-            </p>
+              </div>
+            </div>
           </div>
+
         </div>
-        <div class="col-md-4">
-          <div class="img-box">
-            <img src="images/about-img2.png" alt="">
-          </div>
-        </div>
-      </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div class="detail-box1" style="text-align: justify;">
-            <h6><b>Replikasi Master To Master</b></h6>
-            <p>
-              
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
 
       <!-- <div class="btn-box">
@@ -221,7 +299,8 @@
                 Educode
               </h3>
               <p>
-                EduCode adalah sebuah komunitas yang dirancang untuk mempermudah coders dalam menyelesaikan tugas di kampus
+                EduCode adalah sebuah komunitas yang dirancang untuk mempermudah coders dalam menyelesaikan tugas di
+                kampus
               </p>
             </div>
           </div>
@@ -315,11 +394,14 @@
     <!-- footer section -->
 
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/custom.js"></script>
-
+  <!-- Prism.js -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
 
 </body>
 
